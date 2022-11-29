@@ -24,5 +24,8 @@ async def upload_file(file: UploadFile):
         f.write(file.file.read())
             
     pred_class = homeservice.predict(file_dir)   
-    print(pred_class)
-    return {"Message": pred_class}
+    # temp = pred_class.tolist()
+    return {
+        "statusCode": 200,
+        "Prediect_class": pred_class
+        }
