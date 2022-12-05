@@ -16,6 +16,7 @@ def load_weight(img):
     return pred_name
 
 def predict(file_dir):
+    print("FILE NAME ====> ",file_dir)
     img_width, img_height = 225, 225
     img = image.load_img(file_dir, target_size = (img_width, img_height))
     img = image.img_to_array(img)
